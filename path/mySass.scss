@@ -1,0 +1,37 @@
+$myColor: #FF0000;
+
+$myOtherColor: #000;
+
+$liColor: #0000CC;
+
+$myFontColor: #FFF;
+
+$myOtherFontColor: #CCC;
+
+$myFontSize: 40px;
+
+$myFontFace: "Verdana";
+
+$myPadding: 5%;
+
+$myMargin: 10%;
+
+body {
+    background: $myColor;
+    color: $myFontColor;
+    font-size: $myFontSize / 2;
+    font-family: $myFontFace;
+   
+   div {
+       background: $myOtherColor;
+       padding: $myPadding;
+
+    li {
+        color: $liColor;
+        background: $myFontColor;
+        margin: $myMargin;
+        padding: $myPadding;
+    }
+
+   }
+}

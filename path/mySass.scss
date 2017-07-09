@@ -16,6 +16,37 @@ $myPadding: 5%;
 
 $myMargin: 10%;
 
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius(10px);
+    border: 2px solid #FFF;
+    color: #FCFCFC;
+}
+
+#boxA {
+    @extend .box;
+    background-color: #888;
+    padding: 5%;
+    margin: 5%;
+}
+
+#boxB {
+    @extend .box;
+    background-color: #444;
+    padding: 50px;
+    margin: 50px;
+}
+
+#boxC {
+    @extend .box;
+    background-color: #AAA;
+    padding: 2.5%;
+    margin: 2.5%;
+}
+
 body {
     background: $myColor;
     color: $myFontColor;
@@ -31,7 +62,11 @@ body {
         background: $myFontColor;
         margin: $myMargin;
         padding: $myPadding;
+        border: 2px solid #0000FF;
+
+        @include border-radius(50px);
     }
 
    }
 }
+

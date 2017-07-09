@@ -1,3 +1,23 @@
+.box, #boxA, #boxB, #boxC {
+  border-radius: 10px;
+  border: 2px solid #FFF;
+  color: #FCFCFC; }
+
+#boxA {
+  background-color: #888;
+  padding: 5%;
+  margin: 5%; }
+
+#boxB {
+  background-color: #444;
+  padding: 50px;
+  margin: 50px; }
+
+#boxC {
+  background-color: #AAA;
+  padding: 2.5%;
+  margin: 2.5%; }
+
 body {
   background: #FF0000;
   color: #FFF;
@@ -10,6 +30,8 @@ body {
       color: #0000CC;
       background: #FFF;
       margin: 10%;
-      padding: 5%; }
+      padding: 5%;
+      border: 2px solid #0000FF;
+      border-radius: 50px; }
 
 /*# sourceMappingURL=mySass.css.map */

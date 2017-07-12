@@ -1,14 +1,14 @@
-$myColor: #FF0000;
+$myColor: #FFF;
 
 $myOtherColor: #000;
 
-$liColor: #0000CC;
+$liColor: #444;
 
 $myFontColor: #FFF;
 
 $myOtherFontColor: #CCC;
 
-$myFontSize: 40px;
+$myFontSize: 24px;
 
 $myFontFace: "Verdana";
 
@@ -20,37 +20,43 @@ $myMargin: 10%;
     border-radius: $radius;
 }
 
+@mixin padMargin($param){
+    padding: $param;
+    margin: $param;
+}
+
+.top {
+    background-color: $myOtherFontColor;
+}
+
 .box {
     @include border-radius(10px);
-    border: 2px solid #FFF;
+    @include padMargin(25px);
+    border: 2px solid #CCCCCC;
+    box-shadow: 1px 2px 3px #AAAAAA;
     color: #FCFCFC;
+    max-width: 600px;
 }
 
 #boxA {
     @extend .box;
     background-color: #888;
-    padding: 5%;
-    margin: 5%;
 }
 
 #boxB {
     @extend .box;
     background-color: #444;
-    padding: 50px;
-    margin: 50px;
 }
 
 #boxC {
     @extend .box;
     background-color: #AAA;
-    padding: 2.5%;
-    margin: 2.5%;
 }
 
 body {
     background: $myColor;
     color: $myFontColor;
-    font-size: $myFontSize / 2;
+    font-size: $myFontSize;
     font-family: $myFontFace;
    
    div {
@@ -60,11 +66,10 @@ body {
     li {
         color: $liColor;
         background: $myFontColor;
-        margin: $myMargin;
-        padding: $myPadding;
-        border: 2px solid #0000FF;
-
-        @include border-radius(50px);
+        border: 2px solid #888;
+        @extend .box;
+        @include padMargin(25px);
+        font-family: "Times New Roman";
     }
 
    }
